@@ -22,7 +22,8 @@
 
 <p>
   <strong>First question</strong>
-  <%= @user.questions.first.content %>
+  <% first_question = @user.questions.first %>
+  <%= first_question.content if first_question != nil %>
 </p>
 
 <%= link_to 'Edit', edit_user_path(@user) %> |
